@@ -1,0 +1,66 @@
+article.diploma
+    @extend .card
+    background-color: transparent
+    border: 0
+
+    > div:first-of-type
+        @extend .card-body
+        padding-left: 0
+        padding-right: 0
+
+    .title
+        @extend .card-title
+        margin-bottom: .5rem
+        a
+            @extend .link
+            @extend .link-more
+            @extend .stretched-link
+            font-size: px2rem(22)
+            line-height: px2rem(30)
+        & + p
+            font-size: px2rem(18)
+            line-height: 1.5
+
+// list
+ol.diplomas,
+ul.diplomas
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+        border-bottom: 1px solid $border-color
+        padding-bottom: 1rem
+        padding-top: 1rem
+        position: relative
+    a
+        align-items: center
+        display: flex
+        justify-content: space-between
+        &::before
+            content: ''
+            inset: 0
+            position: absolute
+            // polyfill for inset
+            @supports not (inset: 0)
+                bottom: 0
+                left: 0
+                right: 0
+                top: 0
+        &::after
+            @include icon
+            content: map-get($icons, "arrow-right")
+            font-size: px2rem(12)
+            margin-left: px2rem(10)
+
+// select
+.diplomas-select
+    margin-right: - $btn-padding-x
+    text-align: right
+    button
+        @extend .btn
+        @extend .dropdown-toggle
+    .dropdown-menu
+        @extend .dropdown-menu-end
+        a
+            @extend .dropdown-item
+            text-align: right

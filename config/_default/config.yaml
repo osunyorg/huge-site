@@ -1,4 +1,5 @@
-theme: osuny-hugo-theme
+# theme: osuny-hugo-theme
+theme: debug
 
 ## LANGUAGE
 defaultContentLanguage: fr

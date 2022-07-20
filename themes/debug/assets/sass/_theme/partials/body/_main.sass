@@ -1,0 +1,29 @@
+main
+    padding-bottom: $grid-gutter-width * 2.5
+    div,
+    section,
+    h2
+        @if $enable-header-sticky
+            html:not(.is-scrolling-down) &
+                scroll-margin-top: $header-height
+                @include media-breakpoint-up(md)
+                    scroll-margin-top: $header-height-md
+
+    [itemprop='articleBody']
+        overflow-wrap: break-word
+        h2
+            margin-top: $grid-gutter-width * 3
+        // If a h2 directly follows the beginning of the article, no top margin
+        > h2:first-of-type
+            margin-top: 0
+        img
+            display: block
+            height: auto
+            margin-bottom: $grid-gutter-width
+            max-width: 100%
+        table
+            @extend .table
+        blockquote
+            @extend .blockquote
+        p:last-child
+            margin-bottom: 0

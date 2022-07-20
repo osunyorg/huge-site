@@ -1,0 +1,37 @@
+.block-pages
+
+    &--cards
+        background-color: $block-pages-card-background
+        padding-bottom: $grid-gutter-width
+        padding-top: $grid-gutter-width
+        .pages
+            --bs-gutter-y: #{$grid-gutter-width}
+            > *
+                @extend .col-lg-4
+            .page
+                aspect-ratio: 0.887
+                background-color: $block-pages-card-page-background
+                transition: background .3s, color .3s
+                &,
+                a
+                    color: $block-pages-card-page-color
+                .more
+                    @include link
+                    text-decoration-color: $block-pages-card-page-color
+                > div:first-child
+                    display: flex
+                    flex-direction: column
+                .title
+                    a
+                        text-decoration: none
+                    + p:not(.more)
+                        margin-bottom: 1rem
+                &:hover
+                    background-color: $block-pages-card-page-background-hover
+                    &,
+                    a
+                        color: $block-pages-card-page-color-hover
+                    .more
+                        text-decoration-color: $block-pages-card-page-color-hover
+                > div:first-of-type
+                    padding: $card-spacer-y $card-spacer-x

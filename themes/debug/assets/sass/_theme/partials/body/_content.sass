@@ -1,0 +1,55 @@
+.content
+    @include make-row()
+    > *
+        @include make-col-ready()
+    > aside
+        @include media-breakpoint-down(md)
+            margin-bottom: map-get($spacers, 4)
+        @include media-breakpoint-up(md)
+            @include make-col(4)
+        @include media-breakpoint-up(lg)
+            @include make-col(3)
+        & + div
+            @include media-breakpoint-up(lg)
+                @include make-col-offset(1)
+    > div
+        @include media-breakpoint-up(md)
+            @include make-col(8)
+        & + aside
+            @include media-breakpoint-down(md)
+                margin-bottom: 0
+            @include media-breakpoint-up(lg)
+                @include make-col-offset(1)
+
+.content-blocks
+    position: relative
+    // aside
+    > aside
+        @extend .container
+        // padding-top: 4rem
+        pointer-events: none
+        @include media-breakpoint-up(md)
+            height: 100%
+            left: 50%
+            // margin-bottom: 0
+            // padding-bottom: 4rem
+            position: absolute
+            transform: translateX(-50%)
+            width: 100%
+        > div
+            @extend .row
+            @extend .sticky
+            > *
+                @extend .col-md-3
+                pointer-events: auto
+    // content
+    @include media-breakpoint-up(md)
+        > aside ~ *
+            .container
+                > *
+                    &:not(.call_to_action)
+                        padding-left: col(4)
+                    &.call_to_action
+                        margin-left: col(4)
+                    &:is(picture)
+                        display: block
