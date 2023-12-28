@@ -6,3 +6,5 @@ node_modules
 /resources
 /_tmp
 jsconfig.json
+hugo_stats.json
+static/pagefind
