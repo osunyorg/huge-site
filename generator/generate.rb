@@ -1,10 +1,10 @@
 require 'faker'
 require 'fileutils'
 
-quantity = 10
-path = '../content/posts/'
+quantity = 10000
+path = '../content/fr/posts/'
 medias = [
-    'fd27ad0e-4144-4625-95c0-f7e6d940aea0',
+    '2f0c2f50-84fe-4fab-8e33-62cae514828a',
     '7b416344-4789-4485-83ac-2751aa740f10'
 ]
 
@@ -26,9 +26,13 @@ image:
   credit: >
 description_short: >
   #{Faker::Lorem.paragraph_by_chars number: 200}
-blocks:
-  - template: chapter
+contents:
+  - kind: block
+    template: chapter
     title: >-
+
+    ranks:
+      self: false
     position: 1
     data:
       text: >-

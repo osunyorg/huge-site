@@ -1,60 +1,25 @@
-# Osuny hugo template
+# Huge site
 
+Tests de performance avec 10.000 articles.
 
-## Hugo
-Pour installer Hugo
+## 28 décembre 2023
+
 ```
-brew install hugo
-```
-Mise à jour avec
-```
-brew upgrade hugo
-```
+OSUNY runs hugo
+Start building sites … 
+hugo v0.121.0-e321c3502aa8e80a7a7c951359339a985f082757+extended darwin/amd64 BuildDate=2023-12-05T15:22:31Z VendorInfo=brew
 
 
-## Template hugo osuny
-https://github.com/noesya/osuny-hugo-template
+                   |  FR   
+-------------------+-------
+  Pages            | 9939  
+  Paginator pages  |  992  
+  Non-page files   |    0  
+  Static files     |   65  
+  Processed images |    0  
+  Aliases          |    6  
+  Sitemaps         |    1  
+  Cleaned          |    0  
 
-Pour faire la mise à jour :
-```
-git remote add template git@github.com:noesya/osuny-hugo-template.git
-git fetch --all
-git merge template/main --allow-unrelated-histories
-```
-
-
-## Install
-
-Pour cloner avec le thème
-```
-git clone git@github.com:noesya/osuny-hugo-template.git --recurse-submodules
-```
-Pour récupérer le thème
-```
-git pull --recurse-submodules
-```
-
-
-## Commands
-
-Pour lancer le site
-```
-yarn
-yarn watch
-```
-
-
-## Netlify
-Pour déployer le site avec Netlify, penser à ajouter la deploy key.
-
-
-## Params
-
-Les params principaux sont dans config.yaml du theme, pour en ajouter ou modifier il faut overider dans config/_defaults/config.yaml
-```
-cdnkey: https://osuny-1b4da.kxcdn.com
-cookie_banner:
-  enable: true
-  blank: true
-  page: https://gdpr.eu/cookies/
+Total in 58435 ms
 ```

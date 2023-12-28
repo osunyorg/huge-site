@@ -1,5 +1,11 @@
 theme: osuny-hugo-theme-aaa
 # theme: ananke
-
+enableRobotsTXT: true
+removePathAccents: true
 defaultContentLanguage: fr
 languageCode: fr
+paginate: 18
+params:
+  posts:
+    index:
+      layout: grid
