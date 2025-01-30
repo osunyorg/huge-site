@@ -1,7 +1,0 @@
-{{- $bodyclass := .Params.bodyclass | default "" -}}
-
-{{- if ne $bodyclass "" -}}
-  {{- $bodyclass = printf "page-%s" $bodyclass -}}
-{{- end -}}
-
-{{- return $bodyclass -}}

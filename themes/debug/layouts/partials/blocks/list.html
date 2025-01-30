@@ -1,8 +1,0 @@
-{{- if . -}}
-  <div class="blocks">
-  {{- range . -}}
-    {{ $template := printf "blocks/templates/%s.html" .template }}
-    {{ partial $template . }}
-  {{- end -}}
-  </div>
-{{- end -}}
